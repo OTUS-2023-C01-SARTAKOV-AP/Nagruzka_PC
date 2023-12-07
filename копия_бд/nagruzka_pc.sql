@@ -16,7 +16,6 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP SUBSCRIPTION IF EXISTS get_quik_m1_mmvb_ru;
 DROP INDEX IF EXISTS db_log."нагрузка_системы_время_idx";
 DROP TABLE IF EXISTS db_log."нагрузка_системы";
 DROP TABLE IF EXISTS db_log."t_log_ошибки_вфункциях";
@@ -7951,14 +7950,6 @@ COPY db_log."нагрузка_системы" (cpu_min, cpu_max, cpu_midle, ram_
 CREATE UNIQUE INDEX "нагрузка_системы_время_idx" ON db_log."нагрузка_системы" USING btree ("время");
 
 
---
--- Name: get_quik_m1_mmvb_ru; Type: SUBSCRIPTION; Schema: -; Owner: postgres
---
-
-CREATE SUBSCRIPTION get_quik_m1_mmvb_ru CONNECTION 'postgresql://postgres:123@192.168.2.50:5432/mmvb_quik' PUBLICATION quik_m1_mmvb_ru WITH (connect = false, slot_name = 'get_quik_m1_mmvb_ru');
-
-
-ALTER SUBSCRIPTION get_quik_m1_mmvb_ru OWNER TO postgres;
 
 --
 -- PostgreSQL database dump complete
