@@ -57,7 +57,7 @@
 
 Более подробно описано в инструкции и описании к проекту. Можно скачать *.pdf файл.
 
-|  ![]("https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/Описание__Си_проект_нагрузка_пк.pdf) 
+[Описание Си проекта нагрузки ПК.pdf](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/Описание__Си_проект_нагрузка_пк.pdf) 
 
 Описание Си проекта нагрузки ПК.pdf
 
