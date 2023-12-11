@@ -1,0 +1,128 @@
+#include <stdio.h>
+#include <string.h>
+#include <wctype.h> 
+#include <wchar.h> 
+#include <time.h> 
+#include <libpq-fe.h>   // есть /usr/include/postgresql/
+#include <ctype.h>
+#include <iso646.h>
+#include <stdbool.h>
+#include <uchar.h>  //  /usr/include/uchar.h
+#include <stdlib.h> 
+#include <locale.h>
+//#include <wctype.h>
+#include <wchar.h>
+// #include <cwchar.h> такого нет
+#include <time.h>
+#include <math.h>
+
+
+// импорт файла конфигурации. Первичные настройки работы программы (нагрузка процессора, температура процессора, оперативная память, жесткий диск ...
+struct структ_глоб_настройки {
+        // char login_db[128];
+        // char password_db[128];
+        // char db_name[128]; 
+        // char host_db[16];
+        // char port_dp[6];
+        // int старт_cpu_колво; // если =1, то многопоточность запрещена!!!
+        double max_нагрузка_cpu; // в процентах
+        // double min_нагрузкa_cpu; // в процентах
+        double max_температура_cpu; // в градусах
+        // double min_температуры_cpu; // в градусах
+        // double min_сободной_RAM; // в процентах
+        // int задержка_милисек;  // в миллисекундках (1/1000 сек)
+    } ;  // структА, структВ;
+    
+
+
+
+
+#if 1==1
+void f_настройки_программы(struct структ_глоб_настройки *pnt)
+{        
+    //struct структ_глоб_настройки  temp;
+
+    //#define BUFSIZ 512  = 8192
+    #define SLEN 512        
+    //#define МАКС_ДЛИНА_СТРОКИ 512
+ 
+    // char file[SLEN];
+    // char ch;
+    // wchar_t русская_буква;
+    wchar_t *end;
+    //wchar_t русская_строка[SLEN];
+    //wchar_t строка_пустышка[SLEN];
+        
+    //char строка[SLEN];
+    wchar_t русское_слово_1[SLEN];
+    wchar_t русское_слово_2[SLEN];
+    char пустышка_utf8[SLEN];
+    //wchar_t пустышка_utf8[SLEN];
+    char путь_к_файлу_рус[SLEN] = "/home/postgres/_ММВБ_Си/сеть/настройка_параметров/config.conf";
+    // char *указатель_строки;
+        
+    FILE *наш_файл;
+    // long count; // last;
+        
+    printf(setlocale(LC_ALL, ""));
+    printf("\nПуть к файлу: %s\n", путь_к_файлу_рус);
+
+    
+ 
+    if ((наш_файл = fopen(путь_к_файлу_рус, "r")) == NULL)
+    {
+        printf("Программе ППППП не удаётся открыть файл %s\n", путь_к_файлу_рус);
+        // fprintf(stdout, " Не удаётся открыть файл нагрузки процессора. \n");
+        exit(EXIT_FAILURE);
+    }
+        
+
+        
+
+   pnt->max_нагрузка_cpu = 888.99;//atoi(русское_слово_2) * 1.0;     
+        
+        
+    // Ура, работает !!!!
+    int i=1;
+    
+    while ((fscanf(наш_файл, "%ls%ls%400[^\n]", русское_слово_1, русское_слово_2, пустышка_utf8 )) >0 )
+    {
+        if (русское_слово_1[0] =='#')
+        {
+            continue;
+        }
+        
+        printf("%d) %ls %ls \n", i, русское_слово_1, русское_слово_2); // перенос строк уже есть в самом файле!
+        i++;
+            
+        if ((wcscmp(русское_слово_1, L"макс_нагрузка_cpu")) == 0)
+        {
+            printf("\t\tСтрока = \"макс_нагрузка_cpu найдена\"  (%ls) = %ls!!!!\n", русское_слово_1, русское_слово_2); 
+            pnt->max_нагрузка_cpu = 888.99;//atoi(русское_слово_2) * 1.0;
+            printf("\n\n глоб_настройки.max_нагрузка_cpu = %lf \n\n", pnt->max_нагрузка_cpu);
+            
+            unsigned long int aaa = wcstoul(русское_слово_2, &end, 10);
+            pnt->max_нагрузка_cpu = aaa;
+            printf("\n\n глоб_настройки.max_нагрузка_cpu = %lf, wcstoul(русское_слово_2) =%lu\n\n", pnt->max_нагрузка_cpu, aaa); 
+                 
+            FILE *fp;
+            fp = fopen("/home/postgres/1111.txt","a+");
+            // fputs("This is course Otus", fp);
+            // fseek( fp, 7, SEEK_SET );
+            fputws(L"Г u г = русское_слово_1\n", fp);
+            fclose(fp);
+        }
+        else if ((wcscmp(русское_слово_1, L"макс_температура_cpu")) == 0)
+        {
+            unsigned long int aaa = wcstoul(русское_слово_2, &end, 10);
+            pnt->max_температура_cpu = aaa;
+            printf("\n\n глоб_настройки.макс_температура_cpu = %lf, wcstoul(русское_слово_2) =%lu\n\n", pnt->max_температура_cpu, aaa); 
+        }
+    }
+        
+    putchar('\n');
+    fclose(наш_файл);
+    //return;
+}
+#endif
+ 

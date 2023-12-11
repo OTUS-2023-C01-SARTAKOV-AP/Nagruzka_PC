@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace>
+  <WorkspaceParserPaths>
+    <Include Path="/home/postgres/Документы/_отдельные_программы_си/001_demon_нагрузка_cpu/demon_нагрузка_cpu/настр_ключи_при_запуске/"/>
+    <Include Path="/home/postgres/Документы/_отдельные_программы_си/001_demon_нагрузка_cpu/demon_нагрузка_cpu/блок_нагрузка_пк/"/>
+    <Include Path="/home/postgres/Документы/_отдельные_программы_си/001_demon_нагрузка_cpu/demon_нагрузка_cpu/бд_запросы/"/>
+    <Include Path="/home/postgres/Документы/_отдельные_программы_си/001_demon_нагрузка_cpu/demon_нагрузка_cpu/main_program/"/>
+  </WorkspaceParserPaths>
+  <BuildMatrix SelectedConfiguration="Debug"/>
+  <Environment Name="&lt;Use Defaults&gt;"/>
+  <WorkspaceParserFlags flags="1"/>
+  <WorkspaceParserMacros/>
+</Workspace>
