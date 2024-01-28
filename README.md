@@ -98,10 +98,12 @@
 ![Пример работы без нагрузок](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/bez_nagruzok.png)
 
 <p> &nbsp; </p> 
+
 Запуск программы с перегревами ПК (Нагрузка_ПК_с_перегревами_23-12-19.pdf): 
 ![Запуск программы с перегревами ПК](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/peregrev_pc.png)
 
 <p> &nbsp; </p> 
+
 Здесь интересный факт. Дело в том, что SSD диск за 5 минту записал 10^7 блоков памяти, а это около 10'000'000*512 ~ 5 Гб данных. Это очень и очень много. 
 Сразу скажу - что это последствия режима "логической репликации" БД PostgreSQL при работе с котировками от ММВБ биржи.
 
@@ -112,11 +114,13 @@
 ![Экстремальная работа SSD диска](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/work_extrem.png)
 
 <p> &nbsp; </p> 
+
 Стандартный режим работы БД. Пики при ночном автоматическом скачивании и разборе данных (Нагрузка_ПК_холостая_работа.pdf): 
 ![Стандартный режим работы БД](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/work_standart.png) 
 
 
 <p> &nbsp; </p> 
+
 Структура логики в БД: 
 ![структура логики в БД](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/nazguzka_pc_schema_db.png)
 
