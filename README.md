@@ -27,7 +27,7 @@
 
 В ходе реазизации этой мелкой задачи, при изучении Linux каталогов "/proc/" стали всплывать интересные индикаторы нагрузок, которые также потихоньку добавлялить с программу по нагрузке ПК. \
 
-В Виду того, что обрабатывалось множество данных, было решено воспользоваться текущей программой и записывать данные в БД PostgreSQL. Затем появилось желание выводить исторические данные в виде графиков. 
+В виду того, что обрабатывалось множество данных, было решено воспользоваться текущей программой и записывать данные в БД PostgreSQL. Затем появилось желание выводить исторические данные в виде графиков. 
 
 Все это вместе и переросло в отдельный проект с анализом множества факторов нагрузок и выводом исторических данных по нагрузке системы. 
 
@@ -79,28 +79,28 @@
 # Что получилось:
 
 Можно выбирать данные о нагрузке за указанный день:
-![Можно выбирать данные о нагрузке за указанный день](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/tree/main/img/nazguzka_pc.png)
+![Можно выбирать данные о нагрузке за указанный день](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/nazguzka_pc.png)
 
 Пример ежемесячного BackUp БД PostgreSQL (Нагрузка_ПК_ежемесячный_бэкап.pdf):
-![Пример ежемесячного BackUp БД PostgreSQL](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/tree/main/img/backup_postgresql.png)
+![Пример ежемесячного BackUp БД PostgreSQL](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/backup_postgresql.png)
 
 
 Пример работы сервера без нагрузок (Нагрузка_ПК_холостая_работа.pdf):
-![Пример работы без нагрузок](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/tree/main/img/bez_nagruzok.png)
+![Пример работы без нагрузок](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/bez_nagruzok.png)
 
 Запуск программы с перегревами ПК (Нагрузка_ПК_с_перегревами_23-12-19.pdf):
-![Запуск программы с перегревами ПК](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/tree/main/img/peregrev_pc.png)
+![Запуск программы с перегревами ПК](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/peregrev_pc.png)
 
 Экстремальная работа SSD диска (Нагрузка_ПК_за_2023-12-06.pdf):
-![Экстремальная работа SSD диска](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/tree/main/img/work_extrem.png)
+![Экстремальная работа SSD диска](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/work_extrem.png)
 
 Стандартный режим работы БД. Пики при ночном автоматическом скачивании и разборе данных (Нагрузка_ПК_холостая_работа.pdf):
-![Стандартный режим работы БД](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/tree/main/img/work_standart.png)
+![Стандартный режим работы БД](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/work_standart.png)
 
 
 
 Структура логики в БД:
-![структура логики в БД](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/tree/main/img/nazguzka_pc_schema_db.png)
+![структура логики в БД](https://github.com/OTUS-2023-C01-SARTAKOV-AP/proekt_nagruzka_PC/blob/main/img/nazguzka_pc_schema_db.png)
 
 
 
